@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fff;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    padding: 100px;
+}
+
+.service-item h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-section {
+    background-color: black;
+    color: white;
+    padding: 80px 0 80px;
+}
+
+.faq-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.faq-subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.faq-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #333;
+    border: 1px solid #999;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.filter-btn.active {
+    background-color: #ffffff !important; 
+    color: #333 !important;          
+    border-color: #ffffff;
+}
+
+.filter-btn:hover:not(.active) {
+    border-color: #fff;
+}
+
+.accordion-item {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 1px solid #222;
+}
+
+.accordion-content {
+    display: none;
+    padding-bottom: 25px;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.accordion-content.show {
+    display: block;
+}
+
+.inquiry-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    padding: 100px;
+}
+
+.inquiry-info h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-grid input,
+.form-grid select {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 12px 0;
+    outline: none;
+    background: transparent;
+}
+
+.form-options {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form-options input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-options input[type="radio"]:checked {
+    border-color: #000;
+}
+
+.form-options input[type="radio"]:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.send-btn {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    background: black;
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    margin-top: 40px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select {
+    position: relative;
+    cursor: pointer;
+}
+
+.select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc; 
+    color: #999; 
+    font-size: 14px;
+}
+
+.custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #f9f9f9; 
+    display: none; 
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.custom-options.open {
+    display: block;
+}
+
+.custom-option {
+    display: block;
+    padding: 12px 20px;
+    color: #000;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.custom-option:hover {
+    background: #f0f0f0;
+}
+
+.select-trigger.selected span {
+    color: #000;
+}
+
+.form-terms{
+    color: #666;
+    padding-top: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter-form input {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+    font-size: 12px;
+    outline: none;
+}
+
+.sub-btn {
+    background-color: #e5e5e5; 
+    color: #000;
+    border: none;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 5px;
+}
+
+.sub-btn:hover {
+    background-color: #d1d1d1;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+}
+
+.inquiry-section {
+    position: relative;
+}
+
+.back-to-top {
+    position: absolute;
+    left: 45px; 
+    display: block;
+    width: auto;
+    padding-top: 340px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+}
+
+.home-link:hover {
+    opacity: 0.5;
+}
+
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .inquiry-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .send-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,258 @@
+* {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.babyhoneysx-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+}
+
+.babyhoneysx-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    object-position: center;
+    display: block;
+}
+
+.babyhoneysx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  
+    width: 100%;
+}
+
+.collections {
+    padding: 50px 5% 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px; 
+    background-color: #fff;
+}
+
+.coll-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.text-overlay-container {
+    position: fixed; 
+    margin-top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5; 
+    mix-blend-mode: difference; 
+    pointer-events: none;
+}
+
+.mask-text {
+    width: 95%; 
+    max-width: 1400px;
+    height: auto;
+    filter: brightness(100%);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+    transition: 0.5s;
+}
+
+.img-wrapper:hover img {
+    filter: grayscale(0%);
+}
+
+.square { aspect-ratio: 1 / 1; max-width: 700px; }
+.wide { aspect-ratio: 16 / 7; max-width: 1000px; }
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    pointer-events: none;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.hover-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.img-wrapper:hover .hover-video {
+    opacity: 1;
+}
+
+.main-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+ช
+.img-wrapper:hover .main-img {
+    opacity: 0;
+}
+
+.img-wrapper:hover {
+    animation-play-state: paused;
+}
+
+.img-wrapper:hover .hover-img {
+    opacity: 1;
+}
+
+.coll-row {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    gap: 20px;
+}
+
+.coll-row .coll-item {
+    flex: 1;
+}
+
+.caption {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;      
+    font-weight: 700;     
+    line-height: 1.4;
+    color: #000000;   
+    margin-top: 15px;
+    cursor: pointer;     
+    transition: color 0.3s ease; 
+    display: block;
+}
+
+.caption span {
+    display: block;        
+    font-size: 14px;       
+    font-weight: 400;    
+    color: #777777;       
+    margin-top: 8px;
+    line-height: 1.6;
+    transition: color 0.3s ease; 
+}
+.caption:hover {
+    color: #999999;        
+}
+
+.caption:hover span {
+    color: #bbbbbb;       
+}
+
+.loop-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #000; 
+}
+
+.img-loop {
+    display: flex;
+    width: fit-content;
+    animation: infiniteScroll 10s linear infinite;
+    background: #000; 
+}
+
+.img-set {
+    display: flex;
+}
+
+.img-set img {
+    height: 100px;
+    width: auto;  
+    display: block;
+}
+
+@keyframes infiniteScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
